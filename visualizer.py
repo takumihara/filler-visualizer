@@ -8,7 +8,9 @@ BLUE = "\033[34m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
 RED = "\033[31m"
-
+GREEN = "\033[32m"
+BOLD = "\033[1m"
+BOLD_UNDERLINE = "\033[1m\033[4m"
 stop = False
 
 
@@ -88,10 +90,14 @@ class Visualizer:
             print("  ", end="")
             line = line[1]
             for x in range(self.x):
-                if line[x] in ("o", "O"):
+                if line[x] == "O":
                     print(f"{RED}{line[x]}", end="")
-                elif line[x] in ("x", "X"):
+                elif line[x] == "o":
+                    print(f"{BOLD_UNDERLINE}{RED}O{RESET}", end="")
+                elif line[x] == "X":
                     print(f"{BLUE}{line[x]}", end="")
+                elif line[x] == "x":
+                    print(f"{BOLD_UNDERLINE}{BLUE}X{RESET}", end="")
                 else:
                     print(f"{RESET}{line[x]}", end="")
                 print("  ", end="")
