@@ -5,16 +5,16 @@
 42 filler のログをビジュアライズしてスポーツさながら楽しむことができます！
 
 ## Usage
-（標準入力で`visualize.py`に渡せばALL OK）
+（標準入力で`visualizer.py`に渡せばALL OK）
 ### 1. 既にあるログをビジュアライズする
 ```
 $ ./filler_vm -t 3 -p1 john_filler -p2 john_filler -f resources/maps/map00 > log.txt
-$ python visualize.py -n 0.1 < log.txt
+$ python visualizer.py -n 0.1 < log.txt
 ```
 
 ### 2. 新しいバトルをビジュアライズする
 ```
-$ ./filler_vm -t 3 -p1 john_filler -p2 john_filler -f resources/maps/map00 2> /dev/null | python visualize.py -n 0.1
+$ ./filler_vm -t 3 -p1 john_filler -p2 john_filler -f resources/maps/map00 2> /dev/null | python visualizer.py -n 0.1
 ```
 
 ## Option
